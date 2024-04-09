@@ -6,8 +6,9 @@ import org.springframework.web.bind.annotation.RestController;
 import com.schekina.ToDo_app.service.TodoService;
 
 @RestController
-public class TodoCtroller {
+public class TodoController {
     @Autowired
     private TodoService todoService;
+
     // TODO create an instance of the service class  for eg Private TodoService todoService;
 }
