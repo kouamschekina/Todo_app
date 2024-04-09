@@ -9,6 +9,4 @@ import com.schekina.ToDo_app.service.TodoService;
 public class TodoController {
     @Autowired
     private TodoService todoService;
-
-    // TODO create an instance of the service class  for eg Private TodoService todoService;
 }
