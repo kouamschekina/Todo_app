@@ -9,7 +9,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 @Entity
-@Table(name = "Todo list")
+@Table(name = "TodoList")
 public class Todo {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
