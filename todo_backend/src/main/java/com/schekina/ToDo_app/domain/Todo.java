@@ -11,7 +11,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 @Entity
-@Table(name = "TodoList")
+@Table(name = "Todo list")
 public class Todo {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
