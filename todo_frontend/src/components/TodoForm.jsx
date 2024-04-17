@@ -37,6 +37,9 @@ function TodoForm(){
         setTodos({...todos, [event.target.name]: event.target.value});
     };
 
+    const handleButtonClick = () => {
+        handleSubmit();
+    }
     return (
         <form onSubmit={handleSubmit} style={{display: 'flex', flexDirection: 'column', gap: '10px '}} className="p-3">
             <div>
@@ -49,7 +52,7 @@ function TodoForm(){
                     placeholder="Name"
                 />
             </div>
-            <button type="submit" className='btn btn-primary btn-sm'>Add Todo</button>
+            <button type="submit" className='btn btn-primary btn-sm' onClick={handleButtonClick}>Add Todo</button>
         </form>
     );
 }
