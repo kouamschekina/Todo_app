@@ -21,16 +21,16 @@ public class TodoController {
     @Autowired
     private TodoService todoService;
 
-    @GetMapping("/todos")
+    @GetMapping("/api/todos")
     public List<Todo> getAllTodos(){
         return todoService.getAllTodos();
     }
 
-    @PostMapping("/todos")
+    @PostMapping("/api/todos")
     public Todo addTodo(@RequestBody Todo todo){
         return todoService.addTodo(todo);
     }
-    @DeleteMapping("/todos")
+    @DeleteMapping("/api/todos")
     public ResponseEntity<Void> deleteTodo(@RequestBody Todo todo){
         todoService.deleteTodo(todo);
         return ResponseEntity.ok().build();

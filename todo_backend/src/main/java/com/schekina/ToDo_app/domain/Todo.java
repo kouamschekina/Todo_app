@@ -1,5 +1,7 @@
 package com.schekina.ToDo_app.domain;
 
+import org.antlr.v4.runtime.misc.NotNull;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -21,6 +23,7 @@ public class Todo {
 
     @Getter
     @Setter
+    @NotNull
     private String name;
 
     public Todo(String name, Long id) {
