@@ -1,0 +1,20 @@
+name: Testing runners
+
+on:
+  push:
+    branches:
+      - '**'
+jobs:
+  test:
+    # Use this YAML in your workflow file for each job
+      runs-on: self-hosted
+      steps:
+        - uses: actions/setup-java@v4
+          with:
+            distribution: 'temurin'
+            java-version: '17'
+        - name: Maven build
+          run: mvn clean package -q
+        - name: Upload artifact
+          uses: actions/upload-artifact@v4
+  
